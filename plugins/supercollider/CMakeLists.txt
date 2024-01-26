@@ -12,6 +12,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake_modules ${CMAKE_MODULE_PATH})
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 ####################################################################################################
 # load modules
@@ -76,9 +77,12 @@ include_directories(../../eigen-3.4.0 ../../EigenRand)
 set(CccRPC_cpp_files
     plugins/CccRPC/CccRPC.hpp
     plugins/CccRPC/CccRPC.cpp
+    plugins/CccRPC/CccHFD.hpp
+    plugins/CccRPC/CccHFD.cpp
 )
 set(CccRPC_sc_files
     plugins/CccRPC/CccRPC.sc
+    plugins/CccRPC/CccHFD.sc
 )
 set(CccRPC_schelp_files
     plugins/CccRPC/CccRPC.schelp
